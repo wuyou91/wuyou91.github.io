@@ -1,0 +1,81 @@
+body,div,ul{
+	margin: 0;padding: 0; 
+}
+html{
+	font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+a:hover{
+	opacity: .8;
+}
+li{
+	list-style-type: none;
+}
+
+.clear-float:after{
+	content:".";
+	display: block;
+	clear:both;
+	height: 0;
+	visibility: none;
+}
+
+#nav-left{
+	float: left;
+	width: 30%;
+	background-color: #282828;
+	text-align: center;
+	color: #fff;
+	opacity: .9;
+}
+#nav-left .id .img-id{
+	width: 100px;
+	height: 100px;
+	margin: 100px auto 10px;
+	border-radius: 50%;
+	background-image: url(../images/img-id.jpg);
+	background-size: 170%;
+	background-repeat:no-repeat;
+	background-position: center;
+	background-color: red;
+}
+#nav-left .id .nam-id{
+	color: #ccc;
+}
+#nav-left .nav{
+	width: 30%;
+	margin: 50px auto;
+}
+
+.nav li a{
+	display: block;
+	padding: 6px 5px;
+	font-size: 20px;
+}
+
+#nav-left .info .contact{
+	width: 109px;
+	margin: 200px auto 10px;
+}
+#nav-left .info .contact li{
+	float: left;
+	margin-right:10px; 
+}
+
+#nav-left .info .contact li a{
+	display: block;
+	width: 26px;
+}
+.copyright{
+	display: block;
+	margin-top:80px; 
+	font-size: 12px;
+	letter-spacing:1px;
+}
+
+.content{
+	background-image: url(../images/bg.jpg);
+}
