@@ -5,6 +5,7 @@
 	<title>yancx</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
 	<link rel="stylesheet" href="css/index.css" type="text/css">
+	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/index.js"></script>
 </head>
 <body>
@@ -35,7 +36,32 @@
 			<span class="copyright">Copyright ©2018 by wuyou. All rights reserved. <br />Powered by GitHub Pages.</span>
 		</div>
 	</div>
+	<div id="nav-top">
+		<ul class="menu">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<ul class="nav-mobile">
+		<li><a href="">文章</a></li>
+		<li><a href="">练习</a></li>
+		<li><a href="">摄影</a></li>
+		<li><a href="">简历</a></li>
+		<li><a href="">链接</a></li>
+	</ul>
 	<div class="content" id="content">
 	</div>
+	<script>
+		$("document").ready(function(){
+			$(".menu").click(function(){
+				$(".nav-mobile").slideToggle();
+			})
+
+			$(window).resize(function(){
+				$(".nav-mobile").hide();
+			})
+		})
+	</script>
 </body>
 </html>
