@@ -4,4 +4,13 @@ window.onload=function(){
 	var oContent=document.getElementById("content");
 	oNavLeft.style.height=document.documentElement.clientHeight+"px";
 	oContent.style.height=document.documentElement.clientHeight+"px";
+
+	//小屏下点击出现和影藏菜单栏
+	$(".menu").click(function(){
+		$(".nav-mobile").slideToggle();
+	})
+	//屏幕大小改变影藏菜单栏
+	$(window).resize(function(){
+		$(".nav-mobile").hide();
+	})
 }
