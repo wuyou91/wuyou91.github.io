@@ -1,16 +1,22 @@
-body,div,ul{
-	margin: 0;padding: 0; 
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,ul,li{
+	margin: 0;
+	padding: 0; 
+	margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
 }
 html{
 	font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
 }
+
 a{
 	text-decoration: none;
-	color: #fff;
 }
-a:hover{
-	opacity: .8;
-}
+
 li{
 	list-style-type: none;
 }
@@ -30,6 +36,12 @@ li{
 	text-align: center;
 	color: #fff;
 	position: fixed;
+}
+#nav-left a{
+	color: #fff;
+}
+#nav-left a:hover{
+	opacity: .8;
 }
 
 #nav-left .id{
@@ -132,7 +144,25 @@ li{
 	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.3);
 	box-shadow: 0 1px 5px rgba(0,0,0,0.3);
 }
+#article .item-article{
+	margin: 10px 0;
+	padding:10px 0;
+	border-bottom: 1px dashed #ccc;
+}
 
+#content .rel-content .item-content .list li{
+ display: block;
+ float: left;
+ margin: 10px 20px 10px 0;
+}
+
+#content a{
+	color: #666;
+}
+#content a:hover{
+	color: #f08200;
+	text-decoration: underline;
+}
 
 
 @media screen and (max-width: 640px) {
