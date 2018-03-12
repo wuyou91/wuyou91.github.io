@@ -114,10 +114,6 @@ li{
 	padding: 10px 35px;
 }
 
-#zw{width: 30%;
-	float: left;
-}
-
 #content{
 	width: 70%;
 	background-color: #f2f2f2;
@@ -142,6 +138,6 @@ li{
 @media screen and (max-width: 640px) {
 	#content{width: 100%;}
 	#content .rel-content{width: 95%;}
-	#zw,#nav-left{display: none;}
+	#nav-left{display: none;}
 	#nav-top{display: block;}
 }
