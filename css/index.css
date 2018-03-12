@@ -29,9 +29,9 @@ li{
 	background-color: #282828;
 	text-align: center;
 	color: #fff;
-	opacity: .9;
-	position: relative;
+	position: fixed;
 }
+
 #nav-left .id{
 	margin: 60px auto 40px;
 }
@@ -114,12 +114,34 @@ li{
 	padding: 10px 35px;
 }
 
-.content{
-	background-image: url(../images/bg.jpg);
-	background-position: center;
+#zw{width: 30%;
+	float: left;
 }
 
+#content{
+	width: 70%;
+	background-color: #f2f2f2;
+	float: right;
+}
+
+#content .rel-content{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#content .rel-content .item-content{
+	padding: 20px;
+	margin: 40px 0;
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+	box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
+
+
+
 @media screen and (max-width: 640px) {
-	#nav-left{display: none;}
+	#content{width: 100%;}
+	#content .rel-content{width: 95%;}
+	#zw,#nav-left{display: none;}
 	#nav-top{display: block;}
 }
