@@ -1,0 +1,10 @@
+$(window).ready(function(){
+	//小屏下点击出现和隐藏菜单栏
+	$(".btn-mobile").click(function(){
+		$(".nav-mobile").slideToggle();
+	});
+	//屏幕大小改变隐藏菜单栏
+	$(window).resize(function(){
+		$(".nav-mobile").hide();
+	});
+})

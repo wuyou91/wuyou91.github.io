@@ -1,0 +1,160 @@
+html,body,header,div,span,h1,h2,h3,h4,h5,h6,p,a,ul,li{
+	margin: 0;
+	padding: 0; 
+	margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+html{
+	font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+body{
+	background-color: #f5f5f5;
+}
+
+img{
+	display: block;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+
+li{
+	list-style-type: none;
+}
+.clear-float:after{
+	content:".";
+	display: block;
+	clear:both;
+	height: 0;
+	visibility:hidden;
+}
+
+header{
+	top: 0;
+	width: 100%;
+	position:fixed;
+	height: 80px;
+	background-color: #282828;
+}
+
+header .content{
+	width: 80%;
+	margin: 0 auto;
+}
+
+header .pp{
+	width: 60px;
+	height: 60px;
+	margin: 10px 20px;
+	border-radius: 50%;
+	background-image: url(../images/img-id.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	background-color: red; 
+	float: left;
+	transition: opacity .5s;
+}
+header .pp:hover{
+	opacity: .7;
+	filter: alpha(opacity=70);
+}
+
+header .nav{
+	display: block;
+	float: right;
+}
+header .nav li{
+	float: left;
+}
+
+header .nav li a{
+	display: block;
+	font-size: 18px;
+	line-height: 18px;
+	padding: 31px 30px;
+	transition: background-color .5s;
+}
+header .nav li a:hover{
+	color: black;
+	background-color: #ccc;
+}
+header .btn-mobile{
+	width: 42px;
+	height: 42px;
+	padding: 19px 25px;
+	display: none;
+
+}
+header .btn-mobile li{
+	margin-bottom:12px; 
+	border-bottom: 2px solid #ccc;
+}
+
+header .nav-mobile{
+	position: fixed;
+	top:80px;
+	left: 0;
+	background-color: #282828; 
+	display: none;
+}
+header .nav-mobile li a{
+	display: block;
+	padding: 10px 40px;
+	font-size: 16px;
+	transition: background-color .5s;
+}
+header .nav-mobile li a:hover{
+	color: black;
+	background-color: #ccc;
+}
+
+#content{
+	width: 80%;
+	margin: 80px auto 0;
+}
+
+footer{
+	width: 100%;
+	padding: 60px 0 30px;
+	color: white;
+	text-align: center;
+	background-color: #282828;
+}
+footer .inf{
+	width: 90%;
+	margin: 0 auto;
+}
+
+footer .inf .contact{
+	width: 120px;
+	margin:20px auto;
+}
+footer .inf .contact li{
+	float: left;
+	margin-right: 10px;
+}
+footer .inf .contact li a{
+	display: block;
+	width: 30px;
+	height: 30px;
+}
+
+
+@media screen and (max-width: 1024px){
+	header .nav li a{padding: 31px 15px;}
+}
+@media screen and (max-width: 640px){
+	header .content{width: 95%;}
+	header .nav{display: none;}
+	header .pp{float:right;}
+	header .btn-mobile{display: block;}
+	#content{width: 95%;}
+}
