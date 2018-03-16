@@ -101,10 +101,12 @@
 		@media screen and (max-width: 640px){
 			#content ul li{width: 50%;}
 			#content ul li>div .img-box{height: 200px;line-height: 200px;}
+			#img-box-alert{position: fixed;width: 600px;height: 600px;margin: -220px 0 0 -300px;}
 		}
 		@media screen and (max-width: 420px){
 			#content ul li{width: 50%;}
 			#content ul li>div .img-box{height: 120px;line-height: 120px;}
+			#img-box-alert{position: fixed;width: 400px;height: 400px;margin: -120px 0 0 -200px;}
 		}
 	</style>
 	<script src="../js/jquery-3.3.1.min.js"></script>
@@ -183,9 +185,7 @@
 		<div id="mask"></div>
 		<div id="img-box-alert">
 			<div class="close">x</div>
-			<!-- <div class="img-box"> -->
 				<img id="alertimg" src="" alt="">
-<!-- 			</div> -->
 		</div>
 
 		<div id="gotop"></div>
