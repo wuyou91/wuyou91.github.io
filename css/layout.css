@@ -89,7 +89,7 @@ header .nav li a:hover{
 header .btn-mobile{
 	width: 42px;
 	height: 42px;
-	padding: 19px 25px;
+	padding: 25px 25px 13px;
 	display: none;
 
 }

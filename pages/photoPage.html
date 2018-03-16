@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>phtos page</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" ;content="IE=edge, chrome=1">
 	<link rel="stylesheet" href="../css/layout.css" type="text/css">
 	<style>
 		#content ul{
@@ -102,11 +103,19 @@
 		}
 		@media screen and (max-width: 1024px){
 			#content ul li{width: 33.33%;}
-			#content ul li>div .img-box{height: 150px;line-height: 150px;}
+			#content ul li>div .img-box{height: 200px;line-height: 200px;}
 		}
 		@media screen and (max-width: 960px){
 			#content ul li{width: 50%;}
 			#content ul li>div .img-box{height: 200px;line-height: 200px;}
+		}
+		@media screen and (max-width: 640px){
+			#content ul li{width: 50%;}
+			#content ul li>div .img-box{height: 200px;line-height: 200px;}
+		}
+		@media screen and (max-width: 420px){
+			#content ul li{width: 50%;}
+			#content ul li>div .img-box{height: 120px;line-height: 120px;}
 		}
 	</style>
 	<script src="../js/jquery-3.3.1.min.js"></script>
@@ -118,11 +127,11 @@
 			<div class="pp"></div>
 			<ul class="nav">
 				<li><a href="../index.html">首页</a></li>
-				<li><a href="">文章</a></li>
-				<li><a href="">练习</a></li>
-				<li><a href="">摄影</a></li>
-				<li><a href="">简历</a></li>
-				<li><a href="">链接</a></li>
+				<li><a href="articlePage.html">文章</a></li>
+				<li><a href="testPage.html">练习</a></li>
+				<li><a href="#">摄影</a></li>
+				<li><a href="#CV.html">简历</a></li>
+				<li><a href="linkPage.html">链接</a></li>
 			</ul>
 			<ul class="btn-mobile">
 					<li></li>
@@ -130,12 +139,12 @@
 					<li></li>
 			</ul>
 			<ul class="nav-mobile">
-				<li><a href="#article">首页</a></li>
-				<li><a href="#article">文章</a></li>
-				<li><a href="#test">练习</a></li>
-				<li><a href="#photos">摄影</a></li>
-				<li><a href="#CV">简历</a></li>
-				<li><a href="#link">链接</a></li>
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="articlePage.html">文章</a></li>
+				<li><a href="testPage.html">练习</a></li>
+				<li><a href="#">摄影</a></li>
+				<li><a href="CV.html">简历</a></li>
+				<li><a href="linkPage.html">链接</a></li>
 			</ul>
 		</div>
 	</header>

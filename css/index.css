@@ -165,10 +165,39 @@ li{
 	text-decoration: underline;
 }
 
+footer{
+	width: 100%;
+	color: white;
+	padding: 10px 0;
+	text-align: center;
+	background-color: #282828;
+	display: none;
+	overflow: hidden;
+}
+footer .inf{
+	width: 90%;
+	margin: 0 auto;
+}
+
+footer .inf .contact{
+	width: 120px;
+	margin:20px auto;
+}
+footer .inf .contact li{
+	float: left;
+	margin-right: 10px;
+}
+footer .inf .contact li a{
+	display: block;
+	width: 30px;
+	height: 30px;
+}
+
 
 @media screen and (max-width: 640px) {
 	#content{width: 100%;}
 	#content .rel-content{width: 95%;}
 	#nav-left{display: none;}
 	#nav-top{display: block;}
+	footer{display: block;}
 }
