@@ -139,7 +139,7 @@ footer .inf .contact{
 }
 footer .inf .contact li{
 	float: left;
-	margin-right: 10px;
+	margin: 0 5px;
 }
 footer .inf .contact li a{
 	display: block;
@@ -147,6 +147,29 @@ footer .inf .contact li a{
 	height: 30px;
 }
 
+#gotop{
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	width: 40px;
+	height: 36px;
+	border-radius:5%; 
+	background:rgba(0,0,0,.6) url(../images/icons.png) 8px 6px no-repeat;
+	cursor: pointer;
+	opacity: .5;
+	filter: alpha(opacity=50);
+	display: none;
+}
+#gotop:hover{
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+#gotop a{
+	display: block;
+	width: 20px;
+	padding: 8px 15px;
+	cursor: pointer;
+}
 
 @media screen and (max-width: 1024px){
 	header .nav li a{padding: 31px 15px;}

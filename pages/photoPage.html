@@ -83,31 +83,7 @@
     		user-select:none;
 		}
 		
-		#gotop{
-			position: fixed;
-			right: 10px;
-			bottom: 10px;
-			width: 40px;
-			height: 36px;
-			border-radius:5%; 
-			background:rgba(0,0,0,.6) url(../images/icons.png) 8px 6px no-repeat;
-			cursor: pointer;
-			opacity: .5;
-			filter: alpha(opacity=50);
-			display: none;
-		}
-		#gotop:hover{
-			opacity: 1;
-			filter: alpha(opacity=100);
-
-		}
-
-		#gotop a{
-			display: block;
-			width: 20px;
-			padding: 8px 15px;
-			cursor: pointer;
-		}
+		
 
 
 		@media screen and (max-width: 1440px){
@@ -255,22 +231,7 @@
 				$(this).css("display","none");
 			})
 
-			//刷新后判断返回顶部按钮是否出现
-			if($(window).scrollTop()>200){
-					$("#gotop").css("display","block");
-				}
-			//滚动出现返回顶部按钮
-			$(window).scroll(function(){
-				if($(window).scrollTop()>200){
-					$("#gotop").fadeIn();
-				}else{
-					$("#gotop").fadeOut();
-				}
-			})
-			//点击滚回顶部
-			$("#gotop").click(function(){
-				$("html,body").animate({scrollTop:0}, 500);
-			})			
+				
 			
 		</script>
 </body>
