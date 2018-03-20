@@ -21,6 +21,17 @@ a{
 li{
 	list-style-type: none;
 }
+h2{
+	font-size: 32px;
+	color: #333;
+	letter-spacing: 4px;
+}
+
+
+h3{
+	font-size: 22px;
+	color: #333;
+}
 
 .clear-float:after{
 	content:".";
@@ -137,6 +148,23 @@ li{
 	width: 80%;
 	margin: 0 auto;
 }
+#content .rel-content .head{
+	border-bottom:1px solid #ccc;
+}
+
+#content .rel-content .head h2{
+	float: left;
+}
+#content .rel-content .head h2:after{
+	content:"";
+	display: block;
+	width: 70px;
+	border-bottom: 2px solid #ffbe41;
+}
+#content .rel-content .head span{
+	float: right;
+	margin-top: 26px;
+}
 
 #content .rel-content .item-content{
 	padding: 20px;
@@ -150,11 +178,51 @@ li{
 	padding:10px 0;
 	border-bottom: 1px dashed #ccc;
 }
+#article .item-article a:hover{
+	text-decoration: none;
+	color: #666;
+}
+#article .item-article .gomore{
+	color: #999;
+}
+#article .item-article .gomore:hover{
+	text-decoration: underline;
+}
 
 #content .rel-content .item-content .list li{
  display: block;
  float: left;
  margin: 10px 20px 10px 0;
+}
+
+#content #photos ul{
+	width: 100%;
+	padding: 5px 0 50px;
+}
+#content #photos ul li{
+	box-sizing: border-box;
+	padding: 5px;
+	float: left;
+	width: 25%;
+}
+#content #photos ul li>div{
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+
+#content #photos ul li>div .img-box{
+	width: 100%;
+	height: 200px;
+	line-height: 180px;
+	overflow: hidden;
+}
+
+#content #photos img{
+	display: inline-block;
+	vertical-align:middle;
+	max-width: 100%;
+	cursor: pointer;
 }
 
 #content a{
@@ -194,10 +262,30 @@ footer .inf .contact li a{
 }
 
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1440px){
+	#content #photos ul li{width: 25%;}
+	#content #photos ul li>div .img-box{height: 130px;line-height: 130px;}
+}
+@media screen and (max-width: 1024px){
+	#content #photos ul li{width: 33.33%;}
+	#content #photos ul li>div .img-box{height: 120px;line-height: 120px;}
+}
+@media screen and (max-width: 960px){
+	#content #photos ul li{width: 50%;}
+	#content #photos ul li>div .img-box{height: 150px;line-height: 150px;}
+}
+@media screen and (max-width: 640px){
 	#content{width: 100%;}
 	#content .rel-content{width: 95%;}
 	#nav-left{display: none;}
 	#nav-top{display: block;}
 	footer{display: block;}
+	#content #photos ul li{width: 50%;}
+	#content #photos ul li>div .img-box{height: 180px;line-height: 180px;}
+	#content #photos #img-box-alert{position: fixed;width: 600px;height: 600px;margin: -220px 0 0 -300px;}
+}
+@media screen and (max-width: 420px){
+	#content #photos ul li{width: 50%;}
+	#content #photos ul li>div .img-box{height: 100px;line-height: 100px;}
+	#content #photos #img-box-alert{position: fixed;width: 400px;height: 400px;margin: -120px 0 0 -200px;}
 }
