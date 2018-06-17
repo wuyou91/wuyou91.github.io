@@ -3,7 +3,7 @@ layout: post
 title: "Freecodecamp练习Seek and Destroy"
 date: 2018-01-06
 excerpt: "实现一个摧毁(destroyer)函数，第一个参数是待摧毁的数组，其余的参数是待摧毁的值。当你完成不了挑战的时候，记得开大招'Read-Search-Ask'。"
-tags:[freecodecamp, 学习笔记, js, 数组]
+tags: [freecodecamp, 学习笔记, js, 数组]
 comments: true
 ---
 
