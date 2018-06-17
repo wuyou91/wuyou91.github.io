@@ -75,12 +75,11 @@ body {
 	padding-right: 15px;
 	padding-left: 15px;
 	@include center-block();
-	background-color: $black;
+	background-color: rgba(0,0,0,0.6);
 	color: $color_shark;
 	z-index: 1;
 	border-radius: 3px;
 	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
-	opacity:.6;
 	@include transition(.5s);
 	@media #{$small} {
 		width: 100%;
