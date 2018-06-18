@@ -102,16 +102,16 @@ body {
 }
 .wrapper {
 	width: 95%;
-	max-width: 960px;
+	max-width: 950px;
 	margin: 4rem auto;
-	background: ($white, 0.9);
+	background: $white;
 	color: $color_tuatara;
 	padding: 2em;
 	border-radius: 3px;
 	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
 	@include transition(.5s);
 	@media #{$small} {
-		width: 90%;
+		width: 80%;
 		padding: 2em 0;
 	    box-shadow: none;
 	}
