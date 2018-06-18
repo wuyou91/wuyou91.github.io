@@ -101,10 +101,10 @@ body {
 	}
 }
 .wrapper {
-	width: 80%;
-	max-width: 1080px;
+	width: 95%;
+	max-width: 960px;
 	margin: 4rem auto;
-	background: $white;
+	background: ($white, 0.9);
 	color: $color_tuatara;
 	padding: 2em;
 	border-radius: 3px;
