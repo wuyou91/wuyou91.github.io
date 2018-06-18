@@ -104,18 +104,18 @@ var cat1 = new Cat('tom','red')
 
 ~~~javascript
 function Cat(name,color){
-　　　　this.name = name;
-　　　　this.color = color;
-　　}
-　　Cat.prototype.type = "猫科动物";
-　　Cat.prototype.eat = function(){alert("吃老鼠")};
+    this.name = name;
+    this.color = color;
+}
+    Cat.prototype.type = "猫科动物";
+    Cat.prototype.eat = function(){alert("吃老鼠")};
 ~~~
 然后生成实例
 ~~~javascript
 var cat1 = new Cat("大毛","黄色");
-　　var cat2 = new Cat("二毛","黑色");
-　　alert(cat1.type); // 猫科动物
-　　cat1.eat(); // 吃老鼠
+var cat2 = new Cat("二毛","黑色");
+alert(cat1.type); // 猫科动物
+cat1.eat(); // 吃老鼠
 ~~~
 这时所有实例的type属性和eat()方法，其实都是同一个内存地址，指向prototype对象，因此就提高了运行效率。
 
