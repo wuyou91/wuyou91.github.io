@@ -1,6 +1,7 @@
 // content area
 .content {
 	@include font-size(14);
+	padding: 0 2rem;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased !important;
 	-moz-font-smoothing: antialiased !important;
@@ -73,14 +74,10 @@ h3.title a {
 // quotes
 blockquote {
 	color: $color_gray;
-	border-left:8px solid color: $color_gray;
+	border-left:8px solid $color_gray;
+	color: $color_gray;
 	padding-left:10px;
 	margin: 0;
-}
-@media only screen and (min-width: 48em) {
-	blockquote {
-		margin-left:-28px
-	}
 }
 
 // figcaption
