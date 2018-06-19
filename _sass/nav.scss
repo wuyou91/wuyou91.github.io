@@ -19,17 +19,15 @@
 	button {
 		top: 0;
 		left: 0;
-		background: $comp-color;
 		border: none;
 		width: 48px;
-		height: 45px;
+		height: 42px;
 		text-indent: -900em;
 		overflow: hidden;
 		position: relative;
 		cursor: pointer;
 		outline: none;
 		@include border-radius(0,3px,0,0);
-		opacity: 0.6;
 		@media #{$notsmall} {
 			@include border-radius(3px,3px,3px,3px);
 		}
@@ -44,7 +42,7 @@
 		position: absolute;
 		width: 68%;
 		height: 2px;
-		background: $white;
+		background: $black;
 		top: 10px;
 		left: 16%;
 		box-shadow: 
