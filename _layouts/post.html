@@ -24,7 +24,7 @@ layout: compress
                     </a>
                 <div class="post-title {% if page.feature %} feature {% endif %}">
                     <div>{{ page.title }}</div>
-                    <i class="fa fa-calendar"></i><span>{{ page.date | date_to_string }}</span>
+                    <i class="fa fa-calendar"></i><span>{{ page.date | date: "(%Y年%m月%d日)" }}</span>
                 </div>
                 {{ content }}
                 <div class="entry-meta">
