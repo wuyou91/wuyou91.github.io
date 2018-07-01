@@ -20,7 +20,9 @@ Github给用户提供了运行静态页面的地址，如何展示个人项目�
 ### 2、项目开发完毕，构建一个gh-pages分支，并在此分支中生成最终项目展示代码
 * 切换到gh-pages分支 git checkout -b gh-pages
 * 执行 npm run build 命令，构建代码
-### 3、在gh-pages分支下将dist目录下的所有文件夹推送至远程仓库
+
+### 在gh-pages分支下将dist目录下的所有文件夹推送至远程仓库
+
 ~~~bash
 # 强制添加dist文件夹，因为.gitignore文件中定义了忽略该文件
 git add -f dist
