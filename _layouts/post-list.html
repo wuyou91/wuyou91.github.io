@@ -18,16 +18,16 @@ layout: compress
                 <div class="post-title">
                     <h1>{{ page.title }}</h1>
                     <a class="btn zoombtn" href="{{site.url}}">
-                        <i class="fa fa-home"></i>
+                        <i class="fa fa-home"></i>返回首页
                     </a>
                 </div>
                 <div class="post-list">
                     {% for post in site.posts %} 
                         {% if post.project == null %}
                     <ul>
-                        <li class="wow fadeInLeft" data-wow-duration="1.5s">
+                        <li class="wow fadeInLeft list-item" data-wow-duration="1.5s">
                             <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-                            <p>{{ post.date }}</p>
+                            <i class="fa fa-calendar"></i><span>{{ post.date }}</span>
                             <p>{{ post.excerpt }}</p>
                             <a href="{{ site.url }}{{ post.url }}" class="btn zoombtn">查看更多</a>
                         </li>

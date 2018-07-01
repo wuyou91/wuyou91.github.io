@@ -55,6 +55,7 @@ h3.title a {
 		text-decoration: none;
 		background: $white;
 		color: $color_shark;
+		border-bottom: 1px dashed #ccc;
 		a {
 			@include font-rem(20);
 			text-decoration: none;
@@ -63,6 +64,10 @@ h3.title a {
             &:hover {
                 color: $red;
             }
+		}
+		span {
+			font-size:10px;
+			color:#999;
 		}
 		p {
 			font-weight: lighter;
