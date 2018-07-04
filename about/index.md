@@ -5,15 +5,15 @@ tags: [about me, CV, Front-end developer]
 date: 2018-04-21
 comments: false
 ---
-    
-# 基础信息
+
+## 基础信息
 * 邮箱: ycx1991@live.com
 * 手机: Base64(MTczMDg0NzIwNjk=)
 
-# 教育背景
+## 教育背景
 * 2010.09 ~ 2014.06 吉林农业大学
 
-# 技能&能力
+## 技能&能力
 ### 基础能力
 * 熟练掌握HTML5、CSS3及原生JavaScript。
 * 对ES6有一定了解。
@@ -30,15 +30,15 @@ comments: false
 * 三年设计工作经验，熟练使用各种设计软件。
 * 爱好摄影，有过拍摄工作经验，能拍摄照片和视频并完成后期。
 
-# 工作经历
+## 工作经历
 * *2015.03 ~ 2018.06*  
 	一直从事设计相关工作，期间有接触一些前端方面的工作，曾给公司做过官网。
 	项目演示：[点击查看](http://www.yancx.cn/saturnbird/)
 
-# 练习DEMO
+## 练习DEMO
 * 详情访问：[yancx.cn/DEMO](http://www.yancx.cn/DEMO/)
 
-# 看过的专业书籍
+## 看过的专业书籍
 * [《JavaScript DOM编程艺术（第2版）》](https://book.douban.com/subject/6038371/)，[英] Jeremy Keith / [加] Jeffrey Sambells 著。
 * [《javascript高级程序设计（第3版）》](https://book.douban.com/subject/10546125/)，[美] 尼古拉斯·泽卡斯 著。
 * [《精通CSS 高级Web标准解决方案（第2版）》](https://book.douban.com/subject/4736167/)， [英] Andy Budd / [英] Simon Collison / [英] Cameron Moll 著。
