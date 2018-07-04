@@ -44,5 +44,5 @@ comments: false
 * [《精通CSS 高级Web标准解决方案（第2版）》](https://book.douban.com/subject/4736167/)， [英] Andy Budd / [英] Simon Collison / [英] Cameron Moll 著。
 * [《锋利的jQuery（第2版）》](https://book.douban.com/subject/10792216/)，单东林 / 张晓菲 / 魏然 著。
 * [《ES6标准入门（第3版）》](https://book.douban.com/subject/27127030/)，阮一峰 著。
-* [《写给大家看的设计书（第4版）》](https://book.douban.com/subject/26664522/)，[美] Robin Williams 著。
+* [《写给大家看的设计书（第3版）》](https://book.douban.com/subject/3323633/)，[美] Robin Williams 著。
 * [《版式设计原理》](https://book.douban.com/subject/2238320/)，[日] 佐佐木刚士 著。
