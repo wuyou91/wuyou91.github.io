@@ -15,21 +15,25 @@ comments: false
 
 ## 技能&能力
 > 基础能力
+
 * 熟练掌握HTML5、CSS3及原生JavaScript。
 * 对ES6有一定了解。
 * 熟悉AJAX实现机制、接口调用、数据处理及跨域解决方案。
 * 熟悉移动端布局特点。
 
 > 前端工程化
+
 * 会用webpack、git、node.js等实现模块化开发，版本管理，了解前后端分离。
 
 > 框架与库等的使用情况
+
 * 熟练使用jQuery库的选择器和各类API实现对DOM操作和动画。
 * 能用Bootstrap样式框架开发响应式网页。
 * 用VUE.js写过简单的SPA，用过vue生态的vuex、axios、vux、Element等。
 * 使用过Sass/Less/Stylus CSS预处理语言。
 
 > 其他
+
 * 三年设计工作经验，熟练使用各种设计软件。
 * 爱好摄影，有过拍摄工作经验，能拍摄照片和视频并完成后期。
 
