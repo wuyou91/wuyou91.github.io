@@ -29,7 +29,7 @@ comments: false
 * 用VUE.js写过简单的SPA，用过vue生态的vuex、axios、vux、Element等。
 * 使用过Sass/Less/Stylus CSS预处理语言。
 
->**其他**
+**其他**
 * 三年设计工作经验，熟练使用各种设计软件。
 * 爱好摄影，有过拍摄工作经验，能拍摄照片和视频并完成后期。
 
