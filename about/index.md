@@ -9,6 +9,9 @@ comments: false
 ## 基础信息
 * 邮箱: ycx1991@live.com
 * 手机: Base64(MTczMDg0NzIwNjk=)
+* [GitHub](https://github.com/wuyou91)
+* [微博](https://weibo.com/ycx1991)
+* [知乎](https://www.zhihu.com/people/wu-you-76-28/activities)
 
 ## 教育背景
 * 2010.09 ~ 2014.06 吉林农业大学
