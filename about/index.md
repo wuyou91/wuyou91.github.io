@@ -14,7 +14,7 @@ comments: false
 * [知乎](https://www.zhihu.com/people/wu-you-76-28/activities)
 
 ## 教育背景
-* 2010.09 ~ 2014.06 吉林农业大学
+* 2010.09 ~ 2014.06 本科就读于**吉林农业大学**
 
 ## 技能&能力
 **基础能力**
@@ -29,8 +29,8 @@ comments: false
 **框架与库等的使用情况**
 * 熟练使用jQuery库的选择器和各类API实现对DOM操作和动画。
 * 能用Bootstrap样式框架开发响应式网页。
-* 用VUE.js写过简单的SPA，用过vue生态的vuex、axios、vux、Element等。
-* 使用过Sass/Less/Stylus CSS预处理语言。
+* 用VUE.js写过一些SPA，使用过vue生态的vuex、axios、vux、Element等工具。
+* 使用过Sass/Less/Stylus等CSS预处理语言。
 
 **其他**
 * 三年设计工作经验，熟练使用各种设计软件。
