@@ -57,7 +57,7 @@ Gulp内部使用了node-glob模块来实现其文件匹配功能。我们可以�
 * \[...\]匹配方括号中出现的字符中的任意一个，当方括号中第一个字符为^或!时，则表示不匹配方括号中出现的其他字符中的任意一个，类似js正则表达式中的用法
 * !(pattern\|pattern\|pattern)匹配任何与括号中给定的任一模式都不匹配的
 * ?(pattern\|pattern\|pattern)匹配括号中给定的任一模式0次或1次，类似于js正则中的(pattern\|pattern\|pattern)?
-* +(pattern\|pattern\|pattern)匹配括号中给定的任一模式至少1次，类似于js正则中的(pattern|pattern|pattern)+
+* +(pattern\|pattern\|pattern)匹配括号中给定的任一模式至少1次，类似于js正则中的(pattern\|pattern\|pattern)+
 * \*(pattern\|pattern\|pattern)匹配括号中给定的任一模式0次或多次，类似于js正则中的(pattern\|pattern\|pattern)*
 * @(pattern\|pattern\|pattern)匹配括号中给定的任一模式1次，类似于js正则中的(pattern\|pattern\|pattern)
 
@@ -95,7 +95,7 @@ gulp.dest()方法是用来写文件的，其语法为：
 ~~~
 gulp.dest(path[,options])
 ~~~
-**path**为写入文件的路径
+**path**为写入文件的路径  
 **options**为一个可选的参数对象，通常我们不需要用到
 要想使用好gulp.dest()这个方法，就要理解给它传入的路径参数与最终生成的文件的关系。
 gulp的使用流程一般是这样子的：首先通过gulp.src()方法获取到我们想要处理的文件流，然后把文件流通过pipe方法导入到gulp的插件中，最后把经过插件处理后的流再通过pipe方法导入到gulp.dest()中，gulp.dest()方法则把流中的内容写入到文件中，这里首先需要弄清楚的一点是，我们给gulp.dest()传入的路径参数，只能用来指定要生成的文件的目录，而不能指定生成文件的文件名，它生成文件的文件名使用的是导入到它的文件流自身的文件名，所以生成的文件名是由导入到它的文件流决定的，即使我们给它传入一个带有文件名的路径参数，然后它也会把这个文件名当做是目录名，例如：
@@ -157,8 +157,8 @@ gulp.task方法用来定义任务，内部使用的是Orchestrator，其语法�
 ~~~
 gulp.task(name[, deps], fn)
 ~~~
-**name** 为任务名
-**deps** 是当前定义的任务需要依赖的其他任务，为一个数组。当前定义的任务会在所有依赖的任务执行完毕后才开始执行。如果没有依赖，则可省略这个参数
+**name** 为任务名  
+**deps** 是当前定义的任务需要依赖的其他任务，为一个数组。当前定义的任务会在所有依赖的任务执行完毕后才开始执行。如果没有依赖，则可省略这个参数  
 **fn** 为任务函数，我们把任务要执行的代码都写在里面。该参数也是可选的。
 ~~~
 gulp.task('mytask', ['array', 'of', 'task', 'names'], function() { //定义一个有依赖的任务
@@ -238,8 +238,8 @@ gulp.watch()用来监视文件的变化，当文件发生变化后，我们可�
 ~~~
 gulp.watch(glob[, opts], tasks)
 ~~~
-**glob** 为要监视的文件匹配模式，规则和用法与gulp.src()方法中的glob相同。
-**opts** 为一个可选的配置对象，通常不需要用到
+**glob** 为要监视的文件匹配模式，规则和用法与gulp.src()方法中的glob相同。  
+**opts** 为一个可选的配置对象，通常不需要用到  
 **tasks** 为文件变化后要执行的任务，为一个数组
 ~~~
 gulp.task('uglify',function(){
@@ -254,7 +254,7 @@ gulp.watch()还有另外一种使用方式：
 ~~~
 gulp.watch(glob[, opts, cb])
 ~~~
-**glob**和**opts**参数与第一种用法相同,
+**glob**和**opts**参数与第一种用法相同,  
 **cb**参数为一个函数。每当监视的文件发生变化时，就会调用这个函数,并且会给它传入一个对象，该对象包含了文件变化的一些信息，type属性为变化的类型，可以是added,changed,deleted；path属性为发生变化的文件的路径
 ~~~
 gulp.watch('js/**/*.js', function(event){
@@ -280,7 +280,7 @@ gulp.task('rename', function () {
     //关于gulp-rename的更多强大的用法请参考https://www.npmjs.com/package/gulp-rename
 });
 ~~~
-### * js文件压缩插件-[gulp-uglify](https://www.npmjs.com/package/gulp-uglify)
+### js文件压缩插件-[gulp-uglify](https://www.npmjs.com/package/gulp-uglify)
 安装：npm install --save-dev gulp-uglify
 用来压缩js文件，使用的是uglify引擎
 ~~~
@@ -293,7 +293,7 @@ gulp.task('minify-js', function () {
     .pipe(gulp.dest('dist/js')); //压缩后的路径
 });
 ~~~
-### * css文件压缩插件-[gulp-minify-css](https://www.npmjs.com/package/gulp-minify-css)
+### css文件压缩插件-[gulp-minify-css](https://www.npmjs.com/package/gulp-minify-css)
 安装：npm install --save-dev gulp-minify-css
 要压缩css文件时可以使用该插件
 ~~~
@@ -306,7 +306,7 @@ gulp.task('minify-css', function () {
     .pipe(gulp.dest('dist/css'));
 });
 ~~~
-### *  html文件压缩插件-[gulp-minify-html](https://www.npmjs.com/package/gulp-minify-html)
+### html文件压缩插件-[gulp-minify-html](https://www.npmjs.com/package/gulp-minify-html)
 安装：npm install --save-dev gulp-minify-html
 用来压缩html文件
 ~~~
@@ -319,7 +319,7 @@ gulp.task('minify-html', function () {
     .pipe(gulp.dest('dist/html'));
 });
 ~~~
-### * 文件合并插件-[gulp-concat](https://www.npmjs.com/package/gulp-concat)
+### 文件合并插件-[gulp-concat](https://www.npmjs.com/package/gulp-concat)
 安装：npm install --save-dev gulp-concat
 用来把多个文件合并为一个文件,我们可以用它来合并js或css文件等，这样就能减少页面的http请求数了
 ~~~
@@ -332,8 +332,8 @@ gulp.task('concat', function () {
     .pipe(gulp.dest('dist/js'));
 });
 ~~~
-### * less和sass的编译
-1. less使用[gulp-less](https://www.npmjs.com/package/gulp-less)
+### less和sass的编译
+1. less使用[gulp-less](https://www.npmjs.com/package/gulp-less)  
 安装：npm install --save-dev gulp-less
 ~~~
 var gulp = require('gulp'),
@@ -345,7 +345,7 @@ gulp.task('compile-less', function () {
     .pipe(gulp.dest('dist/css'));
 });
 ~~~
-2. sass使用[gulp-sass](https://www.npmjs.com/package/gulp-sass)
+2. sass使用[gulp-sass](https://www.npmjs.com/package/gulp-sass)  
 安装：npm install --save-dev gulp-sass
 ~~~
 var gulp = require('gulp'),
@@ -358,8 +358,8 @@ gulp.task('compile-sass', function () {
 });
 ~~~
 
-### * 图片压缩-[gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)
-安装：npm install --save-dev gulp-imagemin
+### 图片压缩-[gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)  
+安装：npm install --save-dev gulp-imagemin  
 用来压缩jpg、png、gif等图片
 ~~~
 var gulp = require('gulp');
@@ -377,8 +377,8 @@ gulp.task('default', function () {
 ~~~
 **gulp-imagemin的使用比较复杂一点，而且它本身也有很多插件，建议去它的项目主页看看文档**
 ### 自动刷新-Browsersync + Gulp.js
-[参考文档](http://www.browsersync.cn/docs/gulp/)
-[browsersync官网](http://www.browsersync.cn/)
+[参考文档](http://www.browsersync.cn/docs/gulp/)  
+[browsersync官网](http://www.browsersync.cn/)  
 Browsersync能让浏览器实时、快速响应您的文件更改（html、js、css、sass、less等）并自动刷新页面。**更重要的是 Browsersync可以同时在PC、平板、手机等设备下进项调试。**
 
 
