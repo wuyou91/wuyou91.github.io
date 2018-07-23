@@ -333,7 +333,7 @@ gulp.task('concat', function () {
 });
 ~~~
 ### less和sass的编译
-1. less使用[gulp-less](https://www.npmjs.com/package/gulp-less)  
+1.less使用[gulp-less](https://www.npmjs.com/package/gulp-less)  
 安装：npm install --save-dev gulp-less
 ~~~
 var gulp = require('gulp'),
@@ -345,7 +345,7 @@ gulp.task('compile-less', function () {
     .pipe(gulp.dest('dist/css'));
 });
 ~~~
-2. sass使用[gulp-sass](https://www.npmjs.com/package/gulp-sass)  
+2.sass使用[gulp-sass](https://www.npmjs.com/package/gulp-sass)  
 安装：npm install --save-dev gulp-sass
 ~~~
 var gulp = require('gulp'),
