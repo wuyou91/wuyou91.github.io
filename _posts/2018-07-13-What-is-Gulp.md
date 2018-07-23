@@ -19,6 +19,7 @@ $ npm install --save-dev gulp
 ~~~
 * **在项目根目录下创建一个名为 gulpfile.js 的配置文件：**
 之后要做的事情就是在gulpfile.js文件中定义我们的任务了。
+
 ~~~
 var gulp = require('gulp');
 
@@ -26,7 +27,9 @@ gulp.task('default', function() {
   // 将你的默认的任务代码放在这
 });
 ~~~
+
 * **运行项目：**
+* 
 ~~~
 $ gulp
 ~~~
