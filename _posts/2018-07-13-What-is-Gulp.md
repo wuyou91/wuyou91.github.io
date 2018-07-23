@@ -29,14 +29,13 @@ gulp.task('default', function() {
 ~~~
 
 * **运行项目：**
-* 
 ~~~
 $ gulp
 ~~~
 
 
 ## 二、gulp API 文档
-[点击查看官方文档](https://www.gulpjs.com.cn/docs/api/)
+[点击查看官方文档](https://www.gulpjs.com.cn/docs/api/)  
 **仅有的4个API**
 * gulp.task()
 * gulp.src()
@@ -52,28 +51,28 @@ gulp.src(globs[, options])
 下面我们重点说说Gulp用到的glob的匹配规则以及一些文件匹配技巧。
 Gulp内部使用了node-glob模块来实现其文件匹配功能。我们可以使用下面这些特殊的字符来匹配我们想要的文件：
 
-* **\***匹配文件路径中的0个或多个字符，但不会匹配路径分隔符，除非路径分隔符出现在末尾
-* **\*\***匹配路径中的0个或多个目录及其子目录,需要单独出现，即它左右不能有其他东西了。如果出现在末尾，也能匹配文件。
-* **?** 匹配文件路径中的一个字符(不会匹配路径分隔符)
-* **\[...\]**匹配方括号中出现的字符中的任意一个，当方括号中第一个字符为^或!时，则表示不匹配方括号中出现的其他字符中的任意一个，类似js正则表达式中的用法
-* **!(pattern|pattern|pattern)**匹配任何与括号中给定的任一模式都不匹配的
-* **?(pattern|pattern|pattern)**匹配括号中给定的任一模式0次或1次，类似于js正则中的(pattern|pattern|pattern)?
-* **+(pattern|pattern|pattern)**匹配括号中给定的任一模式至少1次，类似于js正则中的(pattern|pattern|pattern)+
-* **\*(pattern|pattern|pattern)**匹配括号中给定的任一模式0次或多次，类似于js正则中的(pattern|pattern|pattern)*
-* **@(pattern|pattern|pattern)**匹配括号中给定的任一模式1次，类似于js正则中的(pattern|pattern|pattern)
+* \*匹配文件路径中的0个或多个字符，但不会匹配路径分隔符，除非路径分隔符出现在末尾
+* \*\*匹配路径中的0个或多个目录及其子目录,需要单独出现，即它左右不能有其他东西了。如果出现在末尾，也能匹配文件。
+* ? 匹配文件路径中的一个字符(不会匹配路径分隔符)
+* \[...\]匹配方括号中出现的字符中的任意一个，当方括号中第一个字符为^或!时，则表示不匹配方括号中出现的其他字符中的任意一个，类似js正则表达式中的用法
+* !(pattern|pattern|pattern)匹配任何与括号中给定的任一模式都不匹配的
+* ?(pattern|pattern|pattern)匹配括号中给定的任一模式0次或1次，类似于js正则中的(pattern|pattern|pattern)?
+* +(pattern|pattern|pattern)匹配括号中给定的任一模式至少1次，类似于js正则中的(pattern|pattern|pattern)+
+* \*(pattern|pattern|pattern)匹配括号中给定的任一模式0次或多次，类似于js正则中的(pattern|pattern|pattern)*
+* @(pattern|pattern|pattern)匹配括号中给定的任一模式1次，类似于js正则中的(pattern|pattern|pattern)
 
-下面以一系列例子来加深理解
-\* 能匹配 a.js,x.y,abc,abc/,但不能匹配a/b.js
-\*.\* 能匹配 a.js,style.css,a.b,x.y
-\*/\*/\*.js 能匹配 a/b/c.js,x/y/z.js,不能匹配a/b.js,a/b/c/d.js
-\*\* 能匹配 abc,a/b.js,a/b/c.js,x/y/z,x/y/z/a.b,能用来匹配所有的目录和文件
-\*\*/\*.js 能匹配 foo.js,a/foo.js,a/b/foo.js,a/b/c/foo.js
-a/\*\*/z 能匹配 a/z,a/b/z,a/b/c/z,a/d/g/h/j/k/z
-a/\*\*b/z 能匹配 a/b/z,a/sb/z,但不能匹配a/x/sb/z,因为只有单\*\*单独出现才能匹配多级目录
-?.js 能匹配 a.js,b.js,c.js
-a?? 能匹配 a.b,abc,但不能匹配ab/,因为它不会匹配路径分隔符
-\[xyz\].js 只能匹配 x.js,y.js,z.js,不会匹配xy.js,xyz.js等,整个中括号只代表一个字符
-\[^xyz\].js 能匹配 a.js,b.js,c.js等,不能匹配x.js,y.js,z.js
+下面以一系列例子来加深理解  
+\* 能匹配 a.js,x.y,abc,abc/,但不能匹配a/b.js  
+\*.\* 能匹配 a.js,style.css,a.b,x.y  
+\*/\*/\*.js 能匹配 a/b/c.js,x/y/z.js,不能匹配a/b.js,a/b/c/d.js  
+\*\* 能匹配 abc,a/b.js,a/b/c.js,x/y/z,x/y/z/a.b,能用来匹配所有的目录和文件  
+\*\*/\*.js 能匹配 foo.js,a/foo.js,a/b/foo.js,a/b/c/foo.js  
+a/\*\*/z 能匹配 a/z,a/b/z,a/b/c/z,a/d/g/h/j/k/z  
+a/\*\*b/z 能匹配 a/b/z,a/sb/z,但不能匹配a/x/sb/z,因为只有单\*\*单独出现才能匹配多级目录  
+?.js 能匹配 a.js,b.js,c.js  
+a?? 能匹配 a.b,abc,但不能匹配ab/,因为它不会匹配路径分隔符  
+\[xyz\].js 只能匹配 x.js,y.js,z.js,不会匹配xy.js,xyz.js等,整个中括号只代表一个字符  
+\[^xyz\].js 能匹配 a.js,b.js,c.js等,不能匹配x.js,y.js,z.js  
 当有多种匹配模式时可以使用数组
 ~~~
 //使用数组的方式来匹配多种文件
@@ -106,7 +105,7 @@ gulp.src('script/jquery.js')
     .pipe(gulp.dest('dist/foo.js'));
 //最终生成的文件路径为 dist/foo.js/jquery.js,而不是dist/foo.js
 ~~~
-要想改变文件名，可以使用插件**gulp-rename**
+要想改变文件名，可以使用插件**gulp-rename**  
 下面说说生成的文件路径与我们给gulp.dest()方法传入的路径参数之间的关系。
 gulp.dest(path)生成的文件路径是我们传入的path参数后面再加上gulp.src()中有通配符开始出现的那部分路径。例如：
 ~~~
@@ -130,7 +129,7 @@ gulp.src('script/*') //有通配符出现的那部分路径为 *
     //假设匹配到的文件为script/zepto.js    
     .pipe(gulp.dest('dist')); //则最后生成的文件路径为 dist/zepto.js
 ~~~
-通过指定gulp.src()方法配置参数中的base属性，我们可以更灵活的来改变gulp.dest()生成的文件路径。
+通过指定gulp.src()方法配置参数中的base属性，我们可以更灵活的来改变gulp.dest()生成的文件路径。  
 当我们没有在gulp.src()方法中配置base属性时，base的默认值为通配符开始出现之前那部分路径，例如：
 ~~~
 gulp.src('app/src/**/*.css') //此时base的值为 app/src
