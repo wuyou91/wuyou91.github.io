@@ -188,7 +188,8 @@ keep-alive包裹动态组件时，会缓存不活动的组件实例，而不是�
 ~~~
 
 * 缓存路由组件：  
-使用keep-alive可以将所有路径匹配到的路由组件都缓存起来，包括路由组件里面的组件，keep-alive大多数使用场景就是这种。
+使用keep-alive可以将所有路径匹配到的路由组件都缓存起来，包括路由组件里面的组件，keep-alive大多数使用场景就是这种。  
+
 ~~~
 <keep-alive>
     <router-view></router-view>
@@ -209,12 +210,14 @@ beforeMount=> 如果你是从别的路由/组件进来(组件销毁destroyed/或
 mounted=> activated 进入缓存组件 => 执行 beforeRouteEnter回调
 ~~~
 
-因为组件被缓存了，再次进入缓存路由/组件时，不会触发这些钩子：
+因为组件被缓存了，再次进入缓存路由/组件时，不会触发这些钩子：  
+
 ~~~
 // beforeCreate created beforeMount mounted 都不会触发。
 ~~~
 
-所以之后的调用时机是：
+所以之后的调用时机是：  
+
 ~~~
 组件销毁destroyed/或离开缓存deactivated => activated 进入当前缓存组件 
 => 执行 beforeRouteEnter回调
@@ -227,7 +230,8 @@ deactivated：组件被停用(离开路由)时调用
 
 这个钩子可以看作beforeDestroy的替代，如果你缓存了组件，要在组件销毁的的时候做一些事情，你可以放在这个钩子里。
 
-如果你离开了路由，会依次触发：
+如果你离开了路由，会依次触发：  
+
 ~~~
 组件内的离开当前路由钩子beforeRouteLeave =>  路由前置守卫 beforeEach =>
 全局后置钩子afterEach => deactivated 离开缓存组件 => activated 进入缓存组件(如果你进入的也是缓存路由)
@@ -242,7 +246,8 @@ deactivated：组件被停用(离开路由)时调用
 想实现类似的操作，你可以：  
 1. 配置一下路由元信息
 2. 创建两个keep-alive标签
-3. 使用v-if通过路由元信息判断缓存哪些路由。
+3. 使用v-if通过路由元信息判断缓存哪些路由。  
+
 ~~~
 <keep-alive>
     <router-view v-if="$route.meta.keepAlive">
@@ -305,7 +310,7 @@ include和exclude支持三种方式来有条件的缓存路由：采用逗号分
 </keep-alive>
 ~~~
 
-但更多场景中，我们会使用keep-alive来缓存路由：
+但更多场景中，我们会使用keep-alive来缓存路由：  
 ~~~
 <keep-alive include='a'>
     <router-view></router-view>
@@ -319,7 +324,7 @@ include和exclude支持三种方式来有条件的缓存路由：采用逗号分
 3. 匿名组件，不可匹配。(比如路由组件没有name选项，并且没有注册的组件名。)
 4. 只能匹配当前被包裹的组件，不能匹配更下面嵌套的子组件。(比如用在路由上，只能匹配路由组件的name选项，不能匹配路由组件里面的嵌套组件的name选项。)
 5. 文档：<keep-alive>不会在函数式组件中正常工作，因为它们没有缓存实例。
-6. exclude的优先级大于include(也就是说：当include和exclude同时存在时，exclude生效，include不生效。)
+6. exclude的优先级大于include(也就是说：当include和exclude同时存在时，exclude生效，include不生效。)  
 ~~~
 <keep-alive include="a,b" exclude="a">
   <!--只有a不被缓存-->
