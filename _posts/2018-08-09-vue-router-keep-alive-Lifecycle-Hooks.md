@@ -172,14 +172,15 @@ router.afterEach((to, from) => {
 
 **用法：**  
 * 缓存动态组件：  
-keep-alive包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们，此种方式并无太大的实用意义。
+keep-alive包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们，此种方式并无太大的实用意义。  
+
 ~~~
-// 基本
+//基本
 <keep-alive>
   <component :is="view"></component>
 </keep-alive>
 
-// 多个条件判断的子组件
+//多个条件判断的子组件
 <keep-alive>
   <comp-a v-if="a > 1"></comp-a>
   <comp-b v-else></comp-b>
@@ -201,7 +202,8 @@ keep-alive包裹动态组件时，会缓存不活动的组件实例，而不是�
 activated在组件第一次渲染时会被调用，之后在每次缓存组件被激活时调用。
 
 * activated调用时机：  
-第一次进入缓存路由/组件，在mounted后面，beforeRouteEnter守卫传给 next 的回调函数之前调用：
+第一次进入缓存路由/组件，在mounted后面，beforeRouteEnter守卫传给 next 的回调函数之前调用：  
+
 ~~~
 beforeMount=> 如果你是从别的路由/组件进来(组件销毁destroyed/或离开缓存deactivated)=>
 mounted=> activated 进入缓存组件 => 执行 beforeRouteEnter回调
