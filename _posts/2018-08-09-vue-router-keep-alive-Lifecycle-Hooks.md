@@ -3,7 +3,7 @@ layout: post
 title: "关于vue的路由导航守卫、keep-alive、生命周期钩子的详细了解"
 date: 2018-08-09
 excerpt: "说到Vue的钩子函数，可能很多人只停留在一些很简单常用的钩子(created,mounted)，而且对于里面的区别，什么时候该用什么钩子，并没有仔细的去研究过，且Vue的生命周期在面试中也算是比较高频的考点，那么该如何回答这类问题，让人有眼前一亮的感觉呢…"
-tags: [vue, 路由，生命周期函数]
+tags: [vue, 路由, 生命周期函数]
 comments: true
 ---
 转载自：[点击查看](http://obkoro1.com/2018/07/21/Vue%E7%9A%84%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0-%E8%B7%AF%E7%94%B1%E5%AF%BC%E8%88%AA%E5%AE%88%E5%8D%AB%E3%80%81keep-alive%E3%80%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90/)
