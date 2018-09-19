@@ -1,6 +1,6 @@
 // content area
 .content {
-	@include font-size(14);
+	@include font-size(16);
 	padding: 0 2rem;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased !important;
@@ -79,9 +79,8 @@ h3.title a {
 
 // quotes
 blockquote {
-	color: $color_gray;
-	border-left:8px solid $color_gray;
-	color: $color_gray;
+	color: #6a737d;
+	border-left:8px solid #dfe2e5;
 	padding-left:10px;
 	margin: 0;
 }
@@ -136,7 +135,22 @@ li .highlight pre {
 
 // table
 table {
-	width: 100%;
+  width: 100%;
+  tr{
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+    &:nth-child(2n){
+      background-color: #f6f8fa;
+    }
+    th{
+      padding: 6px 13px;
+      border: 1px solid #dfe2e5;
+    }
+    td{
+      padding: 6px 13px;
+      border: 1px solid #dfe2e5;
+    }
+  }
 }
 
 // notice

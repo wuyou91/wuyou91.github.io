@@ -6,7 +6,7 @@ excerpt: "自动化的事情应该交由构建工具来做，时下流行的前�
 tags: [webpack, gulp, 构建工具, 前端打包]
 comments: true
 ---
-在.cnblogs上看到的一篇关于webpack和gulp对比的文章，写得透彻好理解，摘抄下来。
+在cnblogs上看到的一篇关于webpack和gulp对比的文章，写得透彻好理解，摘抄下来。 
 原文见[https://www.cnblogs.com/iovec/p/7921177.html](https://www.cnblogs.com/iovec/p/7921177.html)
 
 ## 理想的前端开发流程
