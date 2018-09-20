@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Git常用命令大全"
-date: 2018-09-03
+date: 2018-09-12
 excerpt: "git较为全的命令大全，包括文件操作、配置信息、远程操作等。"
 tags: [git, 版本管理, 前端工具]
 comments: true
