@@ -144,7 +144,7 @@ module.exports = () => {
 * 语法：json-server [options] <source>
 * 选项列表：
 |参数|简写|默认值|说明|
-|---|---|---|---|
+|----|----|----|----|
 |--config|-c|[默认值: "json-server.json"]|指定配置文件|
 |--port|-p|设置端口|[默认值: 3000]|Number|
 |--host|-H|设置域|[默认值: "0.0.0.0"]|String|
