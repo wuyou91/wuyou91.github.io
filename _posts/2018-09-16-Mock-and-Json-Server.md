@@ -61,11 +61,11 @@ npm install json-server -g //全局安装json-server,以便可以通过npm run x
 然后再项目根目录运行*npm run mock*即可启动json-server,看到终端有如下输出，表示成功了：
 ![img](http://pfrbzthj8.bkt.clouddn.com/mock-and-json-server_02.JPG)
 
-在浏览器输入
-  http://localhost:8085/posts
-  http://localhost:8085/comments
-  http://localhost:8085/profile
-即可查看相应数据，如：
+在浏览器输入  
+  http://localhost:8085/posts  
+  http://localhost:8085/comments  
+  http://localhost:8085/profile  
+即可查看相应数据，如：  
 ![img](http://pfrbzthj8.bkt.clouddn.com/mock-and-json-server_03.JPG)
 
 ### 将json文件替换成js文件
@@ -143,6 +143,7 @@ module.exports = () => {
 ### json-server 的相关启动参数
 * 语法：json-server [options] <source>
 * 选项列表：
+
 |参数|简写|默认值|说明|
 |----|----|----|----|
 |--config|-c|[默认值: "json-server.json"]|指定配置文件|
@@ -155,9 +156,9 @@ module.exports = () => {
 |--readonly|--ro|Allow only GET requests|[布尔]|
 |--nocors|--nc|Disable Cross-Origin Resource Sharing|[布尔]|
 |--nogzip|--ng|Disable GZIP Content-Encoding|[布尔]|
-|--snapshots|-S|Set snapshots directory [默认值: "."]||
-|--delay|-d|Add delay to responses (ms)||
-|--id|-i|Set database id property (e.g. _id) [默认值: "id"]||
+|--snapshots|-S|Set snapshots directory [默认值: "."]| |
+|--delay|-d|Add delay to responses (ms)| |
+|--id|-i|Set database id property (e.g. _id) [默认值: "id"]| |
 |--foreignKeySuffix|--fks|Set foreign key suffix (e.g. _id as in post_id)|[默认值: "Id"]|
 |--help|-h|显示帮助信息|[布尔]|
 |--version|-v|显示版本号|[布尔]|
@@ -366,7 +367,7 @@ server.listen(3000, () => {
 })
 ~~~
 
-*参考文章*
-[前端虚拟接口---mock的用法](https://blog.csdn.net/zula1994/article/details/76889393)
-[json-server 和mock.js生成大量json数据](http://www.cnblogs.com/yycc11/p/9167849.html)
+*参考文章:*  
+[前端虚拟接口---mock的用法](https://blog.csdn.net/zula1994/article/details/76889393)  
+[json-server 和mock.js生成大量json数据](http://www.cnblogs.com/yycc11/p/9167849.html)  
 [json-server 详解](https://www.cnblogs.com/fly_dragon/p/9150732.html)
