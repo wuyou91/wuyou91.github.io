@@ -172,7 +172,7 @@ json-server --watch -port 8888 db.json
 ~~~
 
 ### 路由
-**默认的路由**
+**默认的路由**  
 json-server为提供了GET,POST, PUT, PATCH ,DELETE等请求的API,分别对应数据中的所有类型的实体。
 ~~~
 # 获取所有的课程信息
@@ -194,7 +194,7 @@ DELETE /course/1
 # 获取具体课程信息id=1001
 GET    /course/1001
 ~~~
-**自定义路由**
+**自定义路由**  
 当然你可以自定义路由：
 ~~~
 json-server --watch --routes route.json db.json
@@ -209,8 +209,7 @@ route.json文件
 }
 ~~~
 
-###
-自定义配置文件
+### 自定义配置文件  
 通过命令行配置路由、数据文件、监控等会让命令变的很长，而且容易敲错，可以把命令写到npm的scripts中，但是依然配置不方便。
 
 json-server允许我们把所有的配置放到一个配置文件中，这个配置文件默认json-server.json;
@@ -236,7 +235,7 @@ $ json-server --watch app.js
 $ json-server --watch -c jserver.json db.json
 ~~~
 
-### 过滤查询
+### 过滤查询  
 查询数据，可以额外提供
 ~~~
 GET /posts?title=json-server&author=typicode
@@ -261,7 +260,7 @@ GET /posts?id_lte=100
 GET /posts?title_like=server
 ~~~
 
-### 分页查询
+### 分页查询  
 默认后台处理分页参数为： _page 第几页， _limit一页多少条。
 ~~~
 GET /posts?_page=7
@@ -271,7 +270,7 @@ GET /posts?_page=7&_limit=20
 
 后台会返回总条数，总条数的数据在响应头:X-Total-Count中。
 
-### 排序
+### 排序  
 * 参数： _sort设定排序的字段
 * 参数： _order设定排序的方式（默认升序）
 ~~~
@@ -294,14 +293,14 @@ GET /posts/1/comments?_start=20&_limit=10
 可以通过q参数进行全文检索，例如：GET /posts?q=internet
 
 ### 实体关联
-**关联子实体**
+**关联子实体**  
 包含children的对象, 添加_embed
 ~~~
 GET /posts?_embed=comments
 GET /posts/1?_embed=comments
 ~~~
 
-**关联父实体**
+**关联父实体**  
 包含 parent 的对象, 添加_expand
 ~~~
 GET /comments?_expand=post
