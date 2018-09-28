@@ -309,7 +309,8 @@ GET /comments/1?_expand=post
 
 ### 其他高级用法
 json-server本身就是依赖express开发而来，可以进行深度定制。细节就不展开，具体详情请参考[官网](https://github.com/typicode/json-server)。
-* 自定义路由
+* 自定义路由  
+
 ~~~
 const jsonServer = require('json-server')
 const server = jsonServer.create()
