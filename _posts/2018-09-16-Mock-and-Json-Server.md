@@ -337,7 +337,7 @@ server.listen(3000, () => {
 })
 ~~~
 
-* 自定义输出内容
+* 自定义输出内容  
 ~~~
 router.render = (req, res) => {
   res.jsonp({
@@ -346,7 +346,7 @@ router.render = (req, res) => {
 }
 ~~~
 
-* 自定义用户校验
+* 自定义用户校验  
 ~~~
 const jsonServer = require('json-server')
 const server = jsonServer.create()
