@@ -15,7 +15,7 @@ QRCode.js 是一个用于生成二维码的 JavaScript 库。主要是通过获�
   ~~~
   <div id="qrcode"></div>
   <script type="text/javascript">
-  new QRCode(document.getElementById("qrcode"), "http://www.runoob.com");  // 设置要生成二维码的链接
+  new QRCode(document.getElementById("qrcode"), "http://www.baidu.com");  // 设置要生成二维码的链接
   </script>
   ~~~
 
