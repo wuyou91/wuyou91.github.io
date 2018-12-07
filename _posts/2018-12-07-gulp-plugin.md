@@ -16,14 +16,14 @@ gulp.src('./js/**/{omui,common}.js')        // {} 匹配{}里的文件名
 ~~~
 
 ## 文件操作
-#### 删除操作
+### 删除操作
 del (替代gulp-clean)
 ~~~javascript
 var del = require('del');
 del('./dist');                      // 删除整个dist文件夹
 ~~~
 
-#### 重命名文件
+### 重命名文件
 gulp-rename
 ~~~javascript
 var rename = require("gulp-rename");
@@ -43,7 +43,7 @@ gulp.src('./hello.txt')
   .pipe(gulp.dest('./dist'));
 ~~~
 
-#### 合并文件
+### 合并文件
 gulp-concat
 ~~~JavaScript
 var concat = require('gulp-concat');
@@ -57,7 +57,7 @@ gulp.src(['./js/demo1.js','./js/demo2.js','./js/demo2.js'])
     .pipe(gulp.dest('./dist'));
 ~~~
 
-#### 在虚拟文件流中过滤文件
+### 在虚拟文件流中过滤文件
 gulp-filter
 ~~~javascript
 var filter = require('gulp-filter');
@@ -76,7 +76,7 @@ gulp.src('js/**/*.js')
 ~~~
 
 ## 压缩
-#### 压缩js
+### 压缩js
 gulp-uglify
 ~~~javascript
 var uglify = require("gulp-uglify");
@@ -94,7 +94,7 @@ gulp.src('./hello.js')
     .pipe(gulp.dest('./dist'))
 ~~~
 
-#### 压缩优化css
+### 压缩css
 gulp-csso
 ~~~JavaScript
 var csso = require('gulp-csso');
@@ -104,7 +104,7 @@ gulp.src('./css/*.css')
     .pipe(gulp.dest('./dist/css'))
 ~~~
 
-#### 压缩HTML。
+### 压缩HTML。
 gulp-html-minify
 ~~~JavaScript
 var htmlminify = require('gulp-html-minify');
@@ -114,7 +114,7 @@ gulp.src('index.html')
     .pipe(gulp.dest('./dist'))
 ~~~
 
-#### 压缩图片。
+### 压缩图片。
 gulp-imagemin
 ~~~JavaScript
 var imagemin = require('gulp-imagemin');
@@ -124,7 +124,7 @@ gulp.src('./img/*.{jpg,png,gif,ico}')
     .pipe(gulp.dest('./dist/img'))
 ~~~
 
-#### ZIP压缩文件。
+### ZIP压缩文件。
 gulp-zip
 ~~~JavaScript
 var zip = require('gulp-zip');
@@ -135,7 +135,7 @@ gulp.src('./src/*')
 ~~~
 
 ## JS/CSS自动注入
-#### 自动为css添加浏览器前缀
+### 自动为css添加浏览器前缀
 gulp-autoprefixer
 ~~~JavaScript
 var autoprefixer = require('gulp-autoprefixer');
@@ -159,7 +159,7 @@ gulp.src('./css/*.css')
 
 更多浏览器版本：[browsers](https://github.com/browserslist/browserslist#queries)
 
-#### 解析构建块在HTML文件来代替引用未经优化的脚本和样式表。
+### 解析构建块在HTML文件来代替引用未经优化的脚本和样式表。
 gulp-useref
 ~~~javascript
 // index.html
@@ -182,7 +182,7 @@ gulp.src('index.html')
 <link rel="stylesheet" href="css/all.css">  // 之前的两个<link>替换成一个了
 ~~~
 
-#### 给静态资源文件名添加hash值:unicorn.css => unicorn-d41d8cd98f.css
+### 给静态资源文件名添加hash值:unicorn.css => unicorn-d41d8cd98f.css
 gulp-rev
 ~~~javascript
 var rev = require('gulp-rev');
@@ -192,7 +192,7 @@ gulp.src('./css/*.css')
     .pipe(gulp.dest('./dist/css'))
 ~~~
 
-#### 重写被gulp-rev重命名的文件名
+### 重写被gulp-rev重命名的文件名
 gulp-rev-replace
 ~~~javascript
 var rev = require('gulp-rev');
@@ -206,7 +206,7 @@ gulp.src('index.html')
     .pipe(gulp.dest('./dist'))
 ~~~
 
-#### 替换html中的构建块。
+### 替换html中的构建块。
 gulp-html-replace
 ~~~javascript
 // index.html
@@ -232,7 +232,7 @@ gulp.src('index.html')
 ~~~
 
 ## 流控制
-#### 有条件地运行一个任务
+### 有条件地运行一个任务
 gulp-if
 也可以用三目运算符代替
 ~~~javascript
@@ -246,21 +246,27 @@ gulp.src('./js/*.js')
     .pipe(gulp.dest('./dist/'));
 ~~~
 
+### 按指定顺序运行一组gulp任务
+run-sequence
+gulp默认使用最大并发数执行任务，也就是说所有的任务几乎都是同时执行，而不会等待其它任务。但很多时候，任务是需要有先后次序的，比如要先清理目标目录，然后再执行打包。  
+run-sequence 的作用就是控制多个任务进行顺序执行或者并行执行
+~~~JavaScript
+var runSequence = require('run-sequence'),
+
+gulp.task('default', function(cb) {
+    runSequence(
+        'clean', // 第一步：清理目标目录
+        ['minify:js', 'minify:css', 'minify:html', 'minify:image'], // 第二步：打包 
+        'watch', // 第三步：监控
+        cb
+    );
+});
+~~~
+
 ## 工具
-#### 从包的依赖和附件里加载gulp插件到一个对象里
+### 从包的依赖和附件里加载gulp插件到一个对象里
 gulp-load-plugins
 ~~~JavaScript
-// package.json 
-
-"devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^2.0.1"
-}
-
-// gulpfile.js
-
 var $ = require('gulp-load-plugins')();     // $ 是一个对象,加载了依赖里的插件
 
 gulp.src('./**/*.js')
@@ -270,7 +276,10 @@ gulp.src('./**/*.js')
     .pipe(gulp.dest('./dist'))
 ~~~
 
-#### 编译sass
+### 
+gulp-debug
+
+### 编译sass
 gulp-sass
 ~~~JavaScript
 var sass = require('gulp-sass');
@@ -284,7 +293,7 @@ gulp.src('./sass/**/*.scss')
 gulp.watch('./sass/**/*.scss', ['sass']);   // 实时监听sass文件变动,执行sass任务
 ~~~
 
-#### 将ES6代码编译成ES5。
+### 编译ES6
 gulp-babel
 ~~~JavaScript
 var babel = require('gulp-babel');
@@ -296,7 +305,7 @@ gulp.src('./js/index.js')
     .pipe(gulp.dest('./dist'))
 ~~~
 
-#### 将css文件里引用的图片转为base64
+### 将css文件里引用的图片转为base64
 gulp-base64
 ~~~JavaScript
 var base64 = require('gulp-base64');
@@ -307,3 +316,57 @@ gulp.src('./css/*.css')
     }))
     .pipe(gulp.dest('./dist'))
 ~~~
+
+### 映射源文件
+gulp-sourcemaps
+使处理过的文件映射到源文件上，方便定位到错误代码，进行调试
+~~~javascript
+var gulp = require('gulp');
+var plugin1 = require('gulp-plugin1');
+var plugin2 = require('gulp-plugin2');
+var sourcemaps = require('gulp-sourcemaps');
+ 
+gulp.task('javascript', function() {
+  gulp.src('src/**/*.js')
+    .pipe(sourcemaps.init())
+      .pipe(plugin1())        // 所有的处理需放在sourcemaps.init()和sourcemaps.write()之间
+      .pipe(plugin2())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('dist'));
+});
+~~~
+
+## 其他
+### 获取npm参数
+has-flag
+检查process.argv是否有特定的参数
+
+~~~javascript
+const hasFlag = require('has-flag')
+
+console.log(hasFlag('prod'))
+// 打印true
+
+// 定义的node命令
+$ node foo.js --prod
+~~~
+可在不同环境的命令行添加不同的参数，如DEV,PROD,TEST等。
+然后根据获取到的不同参数判断环境，执行不同的任务，以实现如开发环境、生产环境等的不同打包。
+
+### 处理node的stream
+through2
+~~~JavaScript
+fs.createReadStream('ex.txt')
+  .pipe(through2(function (chunk, enc, callback) {
+    for (var i = 0; i < chunk.length; i++)
+      if (chunk[i] == 97)
+        chunk[i] = 122  // 这里将文件中所有的字符a转换为字符z，
+ 
+    this.push(chunk)
+ 
+    callback()
+   }))
+  .pipe(fs.createWriteStream('out.txt'))
+  .on('finish', () => doSomethingSpecial())
+  ~~~
+
