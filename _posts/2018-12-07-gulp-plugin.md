@@ -8,6 +8,7 @@ comments: true
 ---
 
 ## 匹配符 *、**、！、{}
+
 ~~~javascript
 gulp.src('./js/*.js')               // * 匹配js文件夹下所有.js格式的文件
 gulp.src('./js/**/*.js')            // ** 匹配js文件夹的0个或多个子文件夹
@@ -18,6 +19,7 @@ gulp.src('./js/**/{omui,common}.js')        // {} 匹配{}里的文件名
 ## 文件操作
 ### 删除操作
 del (替代gulp-clean)
+
 ~~~javascript
 var del = require('del');
 del('./dist');                      // 删除整个dist文件夹
@@ -25,6 +27,7 @@ del('./dist');                      // 删除整个dist文件夹
 
 ### 重命名文件
 gulp-rename
+
 ~~~javascript
 var rename = require("gulp-rename");
 gulp.src('./hello.txt')
@@ -45,6 +48,7 @@ gulp.src('./hello.txt')
 
 ### 合并文件
 gulp-concat
+
 ~~~JavaScript
 var concat = require('gulp-concat');
 
@@ -59,6 +63,7 @@ gulp.src(['./js/demo1.js','./js/demo2.js','./js/demo2.js'])
 
 ### 在虚拟文件流中过滤文件
 gulp-filter
+
 ~~~javascript
 var filter = require('gulp-filter');
 
@@ -78,6 +83,7 @@ gulp.src('js/**/*.js')
 ## 压缩
 ### 压缩js
 gulp-uglify
+
 ~~~javascript
 var uglify = require("gulp-uglify");
 
@@ -96,6 +102,7 @@ gulp.src('./hello.js')
 
 ### 压缩css
 gulp-csso
+
 ~~~JavaScript
 var csso = require('gulp-csso');
 
@@ -106,6 +113,7 @@ gulp.src('./css/*.css')
 
 ### 压缩HTML。
 gulp-html-minify
+
 ~~~JavaScript
 var htmlminify = require('gulp-html-minify');
 
@@ -116,6 +124,7 @@ gulp.src('index.html')
 
 ### 压缩图片。
 gulp-imagemin
+
 ~~~JavaScript
 var imagemin = require('gulp-imagemin');
 
@@ -126,6 +135,7 @@ gulp.src('./img/*.{jpg,png,gif,ico}')
 
 ### ZIP压缩文件。
 gulp-zip
+
 ~~~JavaScript
 var zip = require('gulp-zip');
 
@@ -137,6 +147,7 @@ gulp.src('./src/*')
 ## JS/CSS自动注入
 ### 自动为css添加浏览器前缀
 gulp-autoprefixer
+
 ~~~JavaScript
 var autoprefixer = require('gulp-autoprefixer');
 
@@ -161,6 +172,7 @@ gulp.src('./css/*.css')
 
 ### 解析构建块在HTML文件来代替引用未经优化的脚本和样式表。
 gulp-useref
+
 ~~~javascript
 // index.html
 
@@ -178,12 +190,14 @@ gulp.src('index.html')
     .pipe(gulp.dest('./dist'))
 ~~~
 替换之后的index.html中就会变成：
+
 ~~~html
 <link rel="stylesheet" href="css/all.css">  // 之前的两个<link>替换成一个了
 ~~~
 
 ### 给静态资源文件名添加hash值:unicorn.css => unicorn-d41d8cd98f.css
 gulp-rev
+
 ~~~javascript
 var rev = require('gulp-rev');
 
@@ -194,6 +208,7 @@ gulp.src('./css/*.css')
 
 ### 重写被gulp-rev重命名的文件名
 gulp-rev-replace
+
 ~~~javascript
 var rev = require('gulp-rev');
 var revReplace = require('gulp-rev-replace');
@@ -208,6 +223,7 @@ gulp.src('index.html')
 
 ### 替换html中的构建块。
 gulp-html-replace
+
 ~~~javascript
 // index.html
 
@@ -227,6 +243,7 @@ gulp.src('index.html')
     .pipe(gulp.dest('./dist'))
 ~~~
 替换之后的index.html中就会变成：
+
 ~~~html
 <link rel="stylesheet" href="all.css">      // 之前的两个<link>替换成一个了
 ~~~
@@ -235,6 +252,7 @@ gulp.src('index.html')
 ### 有条件地运行一个任务
 gulp-if
 也可以用三目运算符代替
+
 ~~~javascript
 var gulpif = require('gulp-if');
 var uglify = require('gulp-uglify');
@@ -250,6 +268,7 @@ gulp.src('./js/*.js')
 run-sequence
 gulp默认使用最大并发数执行任务，也就是说所有的任务几乎都是同时执行，而不会等待其它任务。但很多时候，任务是需要有先后次序的，比如要先清理目标目录，然后再执行打包。  
 run-sequence 的作用就是控制多个任务进行顺序执行或者并行执行
+
 ~~~JavaScript
 var runSequence = require('run-sequence'),
 
@@ -266,6 +285,7 @@ gulp.task('default', function(cb) {
 ## 工具
 ### 从包的依赖和附件里加载gulp插件到一个对象里
 gulp-load-plugins
+
 ~~~JavaScript
 var $ = require('gulp-load-plugins')();     // $ 是一个对象,加载了依赖里的插件
 
@@ -281,6 +301,7 @@ gulp-debug
 
 ### 编译sass
 gulp-sass
+
 ~~~JavaScript
 var sass = require('gulp-sass');
 
@@ -295,6 +316,7 @@ gulp.watch('./sass/**/*.scss', ['sass']);   // 实时监听sass文件变动,执�
 
 ### 编译ES6
 gulp-babel
+
 ~~~JavaScript
 var babel = require('gulp-babel');
 
@@ -307,6 +329,7 @@ gulp.src('./js/index.js')
 
 ### 将css文件里引用的图片转为base64
 gulp-base64
+
 ~~~JavaScript
 var base64 = require('gulp-base64');
 
@@ -320,6 +343,7 @@ gulp.src('./css/*.css')
 ### 映射源文件
 gulp-sourcemaps
 使处理过的文件映射到源文件上，方便定位到错误代码，进行调试
+
 ~~~javascript
 var gulp = require('gulp');
 var plugin1 = require('gulp-plugin1');
@@ -341,6 +365,7 @@ gulp.task('javascript', function() {
 has-flag
 检查process.argv是否有特定的参数
 
+
 ~~~javascript
 const hasFlag = require('has-flag')
 
@@ -355,6 +380,7 @@ $ node foo.js --prod
 
 ### 处理node的stream
 through2
+
 ~~~JavaScript
 fs.createReadStream('ex.txt')
   .pipe(through2(function (chunk, enc, callback) {
