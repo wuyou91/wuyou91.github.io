@@ -49,7 +49,7 @@ gulp.src('./hello.txt')
 ### 合并文件
 gulp-concat
 
-~~~JavaScript
+~~~javascript
 var concat = require('gulp-concat');
 
 gulp.src('./js/*.js')
@@ -103,7 +103,7 @@ gulp.src('./hello.js')
 ### 压缩css
 gulp-csso
 
-~~~JavaScript
+~~~javascript
 var csso = require('gulp-csso');
 
 gulp.src('./css/*.css')
@@ -114,7 +114,7 @@ gulp.src('./css/*.css')
 ### 压缩HTML。
 gulp-html-minify
 
-~~~JavaScript
+~~~javascript
 var htmlminify = require('gulp-html-minify');
 
 gulp.src('index.html')
@@ -125,7 +125,7 @@ gulp.src('index.html')
 ### 压缩图片。
 gulp-imagemin
 
-~~~JavaScript
+~~~javascript
 var imagemin = require('gulp-imagemin');
 
 gulp.src('./img/*.{jpg,png,gif,ico}')
@@ -136,7 +136,7 @@ gulp.src('./img/*.{jpg,png,gif,ico}')
 ### ZIP压缩文件。
 gulp-zip
 
-~~~JavaScript
+~~~javascript
 var zip = require('gulp-zip');
 
 gulp.src('./src/*')
@@ -148,7 +148,7 @@ gulp.src('./src/*')
 ### 自动为css添加浏览器前缀
 gulp-autoprefixer
 
-~~~JavaScript
+~~~javascript
 var autoprefixer = require('gulp-autoprefixer');
 
 gulp.src('./css/*.css')
@@ -269,7 +269,7 @@ run-sequence
 gulp默认使用最大并发数执行任务，也就是说所有的任务几乎都是同时执行，而不会等待其它任务。但很多时候，任务是需要有先后次序的，比如要先清理目标目录，然后再执行打包。  
 run-sequence 的作用就是控制多个任务进行顺序执行或者并行执行
 
-~~~JavaScript
+~~~javascript
 var runSequence = require('run-sequence'),
 
 gulp.task('default', function(cb) {
@@ -286,7 +286,7 @@ gulp.task('default', function(cb) {
 ### 从包的依赖和附件里加载gulp插件到一个对象里
 gulp-load-plugins
 
-~~~JavaScript
+~~~javascript
 var $ = require('gulp-load-plugins')();     // $ 是一个对象,加载了依赖里的插件
 
 gulp.src('./**/*.js')
@@ -302,7 +302,7 @@ gulp-debug
 ### 编译sass
 gulp-sass
 
-~~~JavaScript
+~~~javascript
 var sass = require('gulp-sass');
 
 gulp.src('./sass/**/*.scss')
@@ -317,7 +317,7 @@ gulp.watch('./sass/**/*.scss', ['sass']);   // 实时监听sass文件变动,执�
 ### 编译ES6
 gulp-babel
 
-~~~JavaScript
+~~~javascript
 var babel = require('gulp-babel');
 
 gulp.src('./js/index.js')
@@ -330,7 +330,7 @@ gulp.src('./js/index.js')
 ### 将css文件里引用的图片转为base64
 gulp-base64
 
-~~~JavaScript
+~~~javascript
 var base64 = require('gulp-base64');
 
 gulp.src('./css/*.css')
@@ -381,7 +381,7 @@ $ node foo.js --prod
 ### 处理node的stream
 through2
 
-~~~JavaScript
+~~~javascript
 fs.createReadStream('ex.txt')
   .pipe(through2(function (chunk, enc, callback) {
     for (var i = 0; i < chunk.length; i++)
