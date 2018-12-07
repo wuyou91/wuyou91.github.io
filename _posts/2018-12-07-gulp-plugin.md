@@ -158,7 +158,7 @@ gulp.src('./css/*.css')
 gulp.src('./css/*.css')
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],      // 浏览器版本
-        cascade：true                       // 美化属性，默认true
+        cascade: true                       // 美化属性，默认true
         add: true                           // 是否添加前缀，默认true
         remove: true                        // 删除过时前缀，默认true
         flexbox: true                       // 为flexbox属性添加前缀，默认true
