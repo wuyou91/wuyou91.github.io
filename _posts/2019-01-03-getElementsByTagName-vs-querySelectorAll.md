@@ -27,7 +27,8 @@ NodeList 对象表示节点的集合。可以通过索引访问，索引值从 0
 对于动态NodeList，获取到以后，做增加或者删除等改变，这个NodeList也会动态的改变。而静态NodeList则不会动态改变，即在获取时会被“定型”。
 
 ## 举例说明
-* getElementsByTagName返回的是一个动态NodeList，如下例：
+* getElementsByTagName返回的是一个动态NodeList，如下例：  
+
 ~~~javascript
 var divs = document.getElementsByTagName("div"),
     i=0;
@@ -39,7 +40,8 @@ while(i < divs.length){
 ~~~
 这将是一个死循环，因为每次循环新增了一个div，divs.length便会跟着动态增加。
 
-* querySelectorAll返回的是一个静态NodeList，如下例：
+* querySelectorAll返回的是一个静态NodeList，如下例：  
+
 ~~~javascript
 var divs = document.querySelectorAll("div"),
     i=0;
