@@ -10,7 +10,7 @@ comments: true
 getElementsByTagName() 方法可返回带有指定标签名的对象的集合。
 
 **提示：** 参数值 "*" 返回文档的所有元素。
-同系列的还有：
+同系列的还有:  
 [getElementById()](http://www.runoob.com/jsref/met-document-getelementbyid.html)  
 [getElementsByClassName()](http://www.runoob.com/jsref/met-document-getelementsbyclassname.html)  
 [getElementsByName()](http://www.runoob.com/jsref/met-doc-getelementsbyname.html)
