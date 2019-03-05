@@ -20,7 +20,7 @@ comments: false
 **基础能力**
 * 熟练掌握HTML5、CSS3和ECMAScript6。
 * 熟悉移动端布局特点。
-
+* 对TCP/IP协议簇有一定了解，熟悉HTTP协议。
 **前端工程化**
 * 会用webpack、gulp实现前端工程化；
 * 能用git实现版本管理。
