@@ -9,6 +9,7 @@ comments: false
 ## 基础信息
 * 邮箱: ycx1991@live.com
 * 手机: Base64(MTczMDg0NzIwNjk=)
+* [主站](http://yancx.cn)
 * [GitHub](https://github.com/wuyou91)
 * [微博](https://weibo.com/ycx1991)
 * [知乎](https://www.zhihu.com/people/wu-you-76-28/activities)
@@ -45,7 +46,7 @@ comments: false
 
 
 ## 练习DEMO
-* 详情访问：[yancx.cn/DEMO](http://www.yancx.cn/DEMO/)
+* 详情访问：[yancx.cn/DEMO](http://classical.yancx.cn/demo)
 
 ## 看过的专业书籍
 * [《JavaScript语言精粹》](https://book.douban.com/subject/11874748/)，道格拉斯•克罗克福德 (Douglas Crockford) 著。
